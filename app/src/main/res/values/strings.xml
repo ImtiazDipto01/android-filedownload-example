@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DownloadAFile</string>
+    <string name="alert_message_image">For using this app, you need to give permission</string>
+    <string name="toast_suggestion">permission not granted</string>
+    <string name="permission_granted">Permission granted</string>
+</resources>
