@@ -120,12 +120,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Map<String, Integer> perms = new HashMap<>();
         switch (requestCode) {
             case REQUEST_CODE_ASK_PERMISSIONS:
-                perms.put(android.Manifest.permission.CAMERA, PackageManager.PERMISSION_GRANTED);
+                perms.put(android.Manifest.permission.READ_EXTERNAL_STORAGE, PackageManager.PERMISSION_GRANTED);
                 perms.put(android.Manifest.permission.WRITE_EXTERNAL_STORAGE, PackageManager.PERMISSION_GRANTED);
                 if (grantResults.length > 0) {
                     for (int i = 0; i < permissions.length; i++)
                         perms.put(permissions[i], grantResults[i]);
-                    if (perms.get(android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
+                    if (perms.get(android.Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
                             perms.get(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                         Toast.makeText(this, getResources().getString(R.string.permission_granted), Toast.LENGTH_SHORT).show();
                         //openBottomSheet();
